@@ -1,0 +1,221 @@
+.nu_btn{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    color: #606266;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .8px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    outline: none;
+    border: 1px solid #dcdfe6;
+    border-color: #dcdfe6;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    border-radius: 2px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+    &:hover{
+       text-decoration: none;
+       box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.225);
+    }
+    &:active{
+       color: #3a8ee6;
+       border-color: #3a8ee6;
+       outline: none;
+    }
+    &.round{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        padding: 12px;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
+        color: #9e9e9e ;    
+        background-color: #cdcdcd ;
+        border-color: #cdcdcd;
+        box-shadow: none;
+    }
+    i{
+        font-size: inherit;
+    }
+
+}
+.nu_btn-primary{
+    color: $btn-primary-color;
+    background: $btn-primary-bg;
+    border: $border-width-default $border-style-default $btn-primary-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-primary-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-primary-bg;
+    }
+}    
+.nu_btn-success{
+    color: $btn-success-color;
+    background: $btn-success-bg;
+    border: $border-width-default $border-style-default $btn-success-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-success-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-success-bg;
+    }
+}
+.nu_btn-secondary{
+    color: $btn-secondary-color;
+    background: $btn-secondary-bg;
+    border: $border-width-default $border-style-default $btn-secondary-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-secondary-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-secondary-bg;
+    }
+}
+.nu_btn-info{
+    color: $btn-info-color;
+    background: $btn-info-bg;
+    border: $border-width-default $border-style-default $btn-info-bg;
+    
+    &:hover{
+        background-color: #23b9fc;
+    }
+    &:active {
+        background-color: $btn-info-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-info-bg;
+    }
+}
+.nu_btn-error{
+    color: $btn-error-color;
+    background: $btn-error-bg;
+    border: $border-width-default $border-style-default $btn-error-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-error-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-error-bg;
+    }
+}
+.nu_btn-warning{
+    color: $btn-warning-color;
+    background: $btn-warning-bg;
+    border: $border-width-default $border-style-default $btn-warning-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-warning-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-warning-bg;
+    }
+}
+.nu_btn-large{
+    height: 40px;
+    line-height: 40px;
+}
+.nu_btn-mini{
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+}
+.nu_btn-fab{
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 22px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    line-height: normal;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+    &:hover{
+        box-shadow: 0 4px 11px 0px rgba(0, 0, 0, 0.375);
+    }
+}
+.nu_btn-ripple{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+}
+.nu_btn-ripple .ripple{
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    pointer-events: none;
+}
+.nu_btn-ripple .animated{
+    animation: ripple 0.6s linear;
+}
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+.nu_btn-group {
+	position: relative;
+    vertical-align: middle;
+    display: inline-block;   
+    box-shadow: none;
+    & button{
+        border-radius: 0;
+        margin: 0;
+    }
+    & button:first-child{
+        @include border-radius();
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+    & button:last-child{
+        @include border-radius;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
