@@ -1,4 +1,4 @@
-# ly-ui
+# nusi-ui
 
 ## Project setup
 ```
